@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Move Tab to Rightmost",
+  "version": "1.0",
+  "description": "Moves the current tab to the rightmost position with a keyboard shortcut.",
+  "permissions": ["tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "move-tab-rightmost": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+P"
+      },
+      "description": "Move current tab to the rightmost"
+    }
+  }
+}
