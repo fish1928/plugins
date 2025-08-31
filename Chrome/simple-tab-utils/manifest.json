@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Shortcuts: Move & Open",
+  "version": "1.2",
+  "description": "Keyboard shortcuts and link control for tabs.",
+  "permissions": ["tabs", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "move-tab-rightmost": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Period"
+      },
+      "description": "Move current tab to the rightmost"
+    },
+    "open-tab-adjacent": {
+      "suggested_key": {
+        "default": "Ctrl+H"
+      },
+      "description": "Open a new tab adjacent to current"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
+
